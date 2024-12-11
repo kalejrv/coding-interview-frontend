@@ -41,3 +41,7 @@ tmp
 /keys
 
 /web/firebase-messaging-sw.js
+
+# Others
+node_modules
+package-lock.json
