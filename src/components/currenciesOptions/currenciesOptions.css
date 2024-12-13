@@ -1,0 +1,47 @@
+.currencies-options {
+  z-index: 2;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  inset-block: 50%;
+  transform: translateY(-50%);
+  border-radius: 16px;
+  background-color: var(--white-color);
+}
+
+.currencies-options-wrapper {
+  margin-block-start: 1rem;
+  width: inherit;
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+
+  &::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    position: absolute;
+    inset-inline: 50%;
+    inset-block-start: 1rem;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    background-color: var(--gray-color);
+  }
+
+  h2 {
+    margin-block: 1.6rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--black-color);
+  }
+}
+
+.isActive {
+  display: flex;
+}
+
+.isNotActive {
+  display: none;
+}

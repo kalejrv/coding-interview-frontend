@@ -1,0 +1,22 @@
+.exchange-currencies-detail {
+  margin-block: 2.2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: .8rem;
+
+  p {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .text {
+      color: var(--gray-color);
+    }
+
+    .value {
+      color: var(--black-color);
+    }
+  }
+}
