@@ -1,0 +1,126 @@
+:root {
+  --bg-color: #e0f8fa;
+  --yellow-color: #ffb200;
+  --gray-color: #666666;
+  --light-gray-color: #eeeeee;
+  --black-color: #1e1e1e;
+  --white-color: #fafafa;
+}
+
+html {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  overflow: inherit;
+}
+
+.currencies-calculator {
+  position: relative;
+
+  &::after {
+    content: "";
+    z-index: -1;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    inset-block-start: -8rem;
+    inset-inline-end: -26rem;
+    border-radius: 100%;
+    background-color: var(--yellow-color);
+
+    @media (min-width: 768px) {
+      width: 750px;
+      height: 750px;
+      inset-block-start: -14rem;
+      inset-inline-end: -36rem;
+    }
+
+    @media (min-width: 1024px) {
+      width: 900px;
+      height: 900px;
+      inset-block-start: -20rem;
+      inset-inline-end: -46rem;
+    }
+  }
+}
+
+.form {
+  width: 350px;
+  padding: 2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border: 2px solid var(--light-gray-color);
+  background-color: var(--white-color);
+  box-shadow: 0px 4px 4px -1px rgba(0 0 0 / 0.2);
+
+  .currency-amount-input,
+  .change-currency-button {
+    width: 100%;
+    padding-block: .6rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+  }
+
+  .currency-amount {
+    margin-block-start: 1.4rem;
+    width: 100%;
+    position: relative;
+
+    .currency-amount-input {
+      padding-inline-start: 4rem;
+      border: 1px solid var(--yellow-color);
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+      }
+
+      -moz-appearance: textfield;
+
+      &::placeholder {
+        color: var(--gray-color);
+        font-size: 1rem;
+        font-style: italic;
+      }
+    }
+
+    .currency-amount-text {
+      color: var(--yellow-color);
+      position: absolute;
+      inset-block-start: 50%;
+      inset-inline-start: 1rem;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .change-currency-button {
+    padding-block: .7rem;
+    color: var(--white-color);
+    background-color: var(--yellow-color);
+    box-shadow: 0px 3px 2px -2px rgba(0 0 0 / 0.4);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
