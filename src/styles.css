@@ -29,7 +29,7 @@ body {
   overflow: inherit;
 }
 
-.calculator {
+.currencies-calculator {
   position: relative;
 
   &::after {
@@ -96,6 +96,12 @@ body {
       }
 
       -moz-appearance: textfield;
+
+      &::placeholder {
+        color: var(--gray-color);
+        font-size: 1rem;
+        font-style: italic;
+      }
     }
 
     .currency-amount-text {

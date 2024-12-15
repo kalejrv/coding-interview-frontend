@@ -1,16 +1,16 @@
-import { CurrenciesOptionsProps } from "../../types"
-import { CriptoCurrenciesOptions } from "./CriptoCurrenciesOptions";
-import "./currenciesOptions.css";
+import { CurrenciesOptionsProps, CurrencyType } from "../../types"
+import { CryptoCurrenciesOptions } from "./CryptoCurrenciesOptions";
 import { FiatCurrenciesOptions } from "./FiatCurrenciesOptions";
+import "./currenciesOptions.css";
 
-export const CurrenciesOptions = ({ isActive, currency }: CurrenciesOptionsProps): JSX.Element => {  
+export const CurrenciesOptions = ({ isActive, currencyType }: CurrenciesOptionsProps): JSX.Element => {  
   return (
     <section className={`currencies-options ${isActive ? "isActive" : "isNotActive"}`}>
       <div className="currencies-options-wrapper">
-        <h2>{currency}</h2>
+        <h2>{currencyType}</h2>
         
-        { (currency === "Cripto") && <CriptoCurrenciesOptions /> }
-        { (currency === "FIAT") && <FiatCurrenciesOptions /> }
+        { (currencyType === CurrencyType.Cripto) && <CryptoCurrenciesOptions /> }
+        { (currencyType === CurrencyType.FIAT) && <FiatCurrenciesOptions /> }
       </div>
     </section>
   );

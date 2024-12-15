@@ -1,13 +1,13 @@
 import { useCurrencyOptions } from "../../hooks";
 import CurrencyOption from "./CurrencyOption";
 
-export const FiatCurrenciesOptions = (): JSX.Element => {
-  const { fiatCurrencies } = useCurrencyOptions();
+export const CryptoCurrenciesOptions = (): JSX.Element => {
+  const { cryptoCurrencies } = useCurrencyOptions();
   
   return (
     <>
       {
-        fiatCurrencies.map((currency) => (
+        cryptoCurrencies.map((currency) => (
           <CurrencyOption key={currency.currency} {...currency} />
         ))
       }
